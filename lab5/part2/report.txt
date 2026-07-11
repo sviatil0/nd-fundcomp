@@ -1,0 +1,24 @@
+Name: Sviatoslav Oleksiienko
+Section: Lab 02
+Assignment: Part 2: A sayings manager
+Purpose: a program that store and manage many of your favorite sayings; they could be movie quotes, lines from songs, proverbs, adages, etc.; basically any memorable lines you can think of.
+
+
+Structure:
+
+    Users perspective:
+        When the user first launches the program, it promts the user to enter the name for the startup file. If the name entered by user is invalid, the appropriate error is outputed. Then, the user is provided with menu of choices in which each choice has a corresponding integer to it. The choices include: displaying all the sayings, entering a new saying into database, displaying the sayings that cointain a specific substring, saving all the sayings into a new file, and quiting the program. After selecting any of the previously mentioned options, the user may be prompted to enter additional information such as substring or a new file name. If the user wants to exit the program, they should enter number 5. 
+        
+    Developer perspective:
+       The program has 7 user defined functions, that are later utilize to abstract the program. The program also contains one user defined struct called ArrayResults which is needed to output both the array length and the two dimensional array from a function. The main program starts from defining variables. After that, the user is prompted for the startup file and the file name is validated. Then, as the file was opened, the function is called that extracts the information from the file into a two dimensional string array. After that, the while loop is started with the condition !isFinished (isFinished is a boolean values) that denotes until the program is finished. Inside the while loop, the function is called that prints menu options. Then, the user is prompted to enter their choice. After, the switch selection statement is started with choices from 1-5 and default for invalid input. Each of 5 cases call user defined functions to achieve corresponding goals. After the while loop, all the pointers are freed. 
+
+Correctness evaluation:
+The program was evaluated for correctness through continuous testing of different inputs. It passed through the tests that related to invalid input too. Here are examples of the program's correct output:
+https://prnt.sc/cobD_ZKYHYMJ
+https://prnt.sc/KnxcfYs7Hhg_
+https://prnt.sc/G_Z0psWZBy8e
+https://prnt.sc/uUuAj2zTG2aV
+https://prnt.sc/o7TaPl9YwwKO
+https://prnt.sc/0c6FbrKR8Rg5
+https://prnt.sc/6r-xvuVYtfUM
+https://prnt.sc/JpY3BXN5ycFA

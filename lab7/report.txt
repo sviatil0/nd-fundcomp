@@ -1,0 +1,18 @@
+Name: Sviatoslav Oleksiienko
+Section: Lab 02
+Problem: Lab 7: Conway's Game of Life
+Purpose: a program that simulates the playing or animation of Conway's Game of Life on a 40-by-40 board, displayed as Xs (live cells) and blank spaces (dead cells). 
+
+How the program works from the user perspective:
+    The user has two ways to start the program. Interactive mode and batch mode. If the user starts the program without any arguments in CLI, the user starts the Interactive mode. Then, the usre will have the options to enter commands
+    a   followed by two integers:  add a new live cell, at those coordinates.
+    r   followed by two integers:  remove a cell from the cell with those coordinates.
+    n :  advance the simulation to the next iteration by applying the rules of the game.
+    q :  quit the program.
+    p :  play the game continuously.
+    Most likely, user would add cells using "a" command. Decide to quit the program if needed. Use n sometimes to advance the simulation to check the algorithm. Eventually, run p to run the proram in perpetunity. To exit the program at this point, the user would need to use CTRL+C.
+    If the user elects to use the batch mode, they would need to create a file to use in advance.The data file will consist of a sequence of "a" commands (see above) followed by a "p" at the end; it will not contain any other commands.In this batch mode, the program will play the scene continuously. After the file is created, the user should put it as argumet to starting the program. If the user inputs to many arguments, the user will get an appropriate error. After the user starts the program, the user will see animation. To stop the program, the user should use CTRL+C.
+How the program works from the developer perspective:
+    The program has 6 functions that are called in the main program: reset (resets the board), disp(displays the board), play(advances the board), AddCell(adds a cell to the board), RemoveCell(removes a cell from the board), isValidIndex(checks whether index for the board is valid). Special attention should be given to the function play. Inside of it, the function goes over all the possible cells via nested loop and counts how many alive cells the array before change had next to this cell. Then, it makes a decision based on rules whether to make the cell alive, dead, or doesn't change the current configuration. I will now describe the main program. The main program checks whether there were an argument entered via CLI. If there was an argument, then the boolean variable isFile becomes true to indicate that batch mode. Then, the main while loop starts running while isFinished boolean variable is false. In this loop, in the interactice mode user enters commands which are directed via switch selection structure. If the batch mode is selected, then the data is read from the file and, using the same switch case, directed to changing the board according way. When p is selected either via the batch mode or interactive mode, an infinite loop is started that runs the play() function to advance the board, disp to display it, unsleep to pause the program for animation pursposes, and system("clear") to clear the CLI for seemless animation purposes. 
+How I verified that the output is correct:
+    I tested the program on the glider example and it outputs the same animation(https://prnt.sc/rR4-hPDYZn1Q). I also tested myscene on both the example file in the public folder and on my file.(https://prnt.sc/3ScEUt7Gm_mB) The output aligns. I also tested the edge cases of entering the wrong input for the command in interactive mode, too many arguments in CLI, and wrong file name. I also hand tested all the interaction mode options insuring that they are working correctly. 

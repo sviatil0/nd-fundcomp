@@ -1,0 +1,30 @@
+Name: Sviatoslav Oleksiienko
+Lab section: 02
+Assignment: Part 3: ND football
+Purpose:  a program that has the wins and losses data stored into arrays, and provides a user with a menu of questions on the data. It allows to dipslay the record for a given year, the number of years with at least of some number loses or wins, compare two years for their wins and losses, see the total number of wins and losses for the whole dataset, and see the number of wins and losses between the provided years.
+
+Structure:
+    User perspective:
+        From the user perspective, the program is continuously priting a menue of 8 integers and their corresponding commands. 
+        As user chooses the menu option, the program prompts for the other input if necessary and ouputs the result for the user selected option. If the user wants to exit the program, they should enter 8 for the command.
+    Developer perspective:
+        8 function were declared to abstract the complexity of the program. Some of the functions take the input and some don't, but none of them return anything.
+        In the main program, the boolean flag is defined to know when the user wants to exit the program. Until this flag, isFinished, is false, the while loop continue to prompt the user to enter a command. The PrintMenuOptions() function is used to print the menu options for the user. The while loop contains a switch selection statement to check which commands was entered by the user. The case options for 1 to 7 lead to futher command being called and promt the user for the input, if needed. The default part of switch is used to display an error when the user enter an invalid command. Finally, the 8 option in switch allows for the boolean flag to become fals and the program to stop. 
+Evaluation:
+
+I compared my flow of output and input (https://prnt.sc/ePUOna4ZZhLc) with the one provided as an example of the output (https://prnt.sc/nK0fPHpx9wIb) and it matched perfectly.
+
+I also checked my own functionality for the errors. For exmple, I checked that I can enter two years in any sequence (greater first or smaller first), and the program would give a correct output for options that find the number of wins and losses between years. In addition, I checked that if enter invalid integer for the menu option it will print appropriate error. Morover, I check all additional unique functions I made by manually comparing the values taken from the provided arrays of losses and wins.
+Examples: 
+
+Input 1:
+Enter your choice: 6
+Output 1: 
+Since 1900 up until 2024 there have been 323 losses and 937 wins. (correct)
+
+Input 2:
+Enter your choice: 7
+Enter year1 and year2: 2022 2024
+Output 2: 
+2022 had 2 losses, while 2024 had 3 losses.
+2022 had 11 wins, while 2024 had 10 wins. (correct)

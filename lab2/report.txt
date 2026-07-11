@@ -1,0 +1,54 @@
+Name: Sviatoslav Oleksiienko
+Section: lab section 02
+
+
+
+Assignment: Lab 2. Part 1: Multiplication Table
+Purpose: Asks the user for the size of the table and then displays the multiplication table exactly this 
+size.
+Structure: 
+The program asks for urser input
+The program displays horiontal header
+The program dispalys the separator between the header and the main body
+The program stars nested loop and prints the main part of the table.
+
+Evaluation:
+The provided example for the input matched with the provided example for the output.
+
+https://prnt.sc/LD6pTVmKLKUs matched with https://prnt.sc/rCTs7SrR7Eae.
+
+The table has also been tested on bigger sizes (10 by 15, 20 by 20, etc) and on smaller sizes (2 by 1, 1 by 1, etc.) The results met expectations.
+
+Assignment: Lab 2. Part 2: Mortgage Calculator 
+Purpose: Allow for the user to calculate the final cost of the house that is assosiated with taking on morgage, view how the balance progresses each month that the payment is made.
+
+Structure: 
+Asks for user input and validate the input corresctness 
+Prints the table header
+Starts the loop that both validates if the payment is too small and prints the payment and balance for each month, if the desired montly payment was sufficient.
+Prints the total cost for the house and the time it took to repay it
+
+
+Evaluation:
+The provided example for the input matched with the provided example for the output.
+
+https://prnt.sc/2fjmvP-C9W7O matched with this https://prnt.sc/ozg_v_ZuNolS
+
+The input was also tested on the options where interest rate, priciple, or montly payment is negative and when montly payement is too low. 
+
+Assignment: Lab 2. Part 3: ASCII Plot 
+Purpose: Creates the graph using the ASKII characters for the function y = 13 * (1 + cos(1.0/2.0 * x)).
+The program also displays extreme points (min and max).
+
+Structure:
+Creates a function that calculates the y value based on the x input for the math formula
+Creates a function that returns a string that represent the ASKII lines on the graph. It splits the graph values into 10 groups, and each group has an increment of symbol "#" by one, based on the possible min and max values. If the user uses the current number that is above the max possible, it would return 11 symbols.
+Prints a header
+Find max and min values
+Starts a loop that outputs the table for x and y values and the graph of the function represented by the "#" characters.
+
+Evaluation:
+
+I compared the max min values and the general look of the graph with Desmos graph calculor and two versions matched.
+
+https://prnt.sc/9aP3r1Nn4tFB matched with this https://prnt.sc/FacEEE7P-2gl

@@ -1,0 +1,44 @@
+Assignment: Part 1: Football Score Formula                                                                               Purpose: Considering the data of touchdowns, extra points, field goals, and safeties, calculate and print the total number of points scored by the team.
+Test cases (how the program was evaluated for correctness):
+
+TouchDowns 1
+Extra Points 1
+Field Goals 1
+Of safeties 1
+Result:
+Total points: 12. (correct)
+
+
+TouchDowns 3
+Extra Points 1
+Field Goals 8
+Of safeties 0
+Result:
+Total points: 43. (correct)
+
+Assignment: Part 2: Formula Calculator
+Purpose: After the user inputs the value for the coefficients a,b, and c, the program puts the real solutions for the quadratic equation ax^2+bx+c=0
+Explaining solution:
+I used the formula for the discriminant to find the solutions (D = b^2-4ac).
+When the discriminant is above 0, there are 2 real solutions. x1=(-b+sqrt(D))/(2a),x2=(-b-sqrt(D))/(2a)
+When the discriminant is equal to 0, there are 2 equivalent real solutions. x=(-b)/(2a)
+When the discriminant is less than 0, there are no real solutions.
+Test cases (how the program was evaluated for correctness):
+
+a = 1
+b = 2
+c = 1
+Result:
+x: -1.000000. (correct)
+
+a = -1321
+b = 2321
+c = 5324
+Result:
+x1: -1.312856, x2: 3.069858. (correct)
+
+a = 21
+b = 21
+c = 2000
+Result:
+No solutions. (correct)

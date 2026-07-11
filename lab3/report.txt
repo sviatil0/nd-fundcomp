@@ -1,0 +1,98 @@
+Name: Sviatoslav Oleksiienko
+Section: lab 02
+
+Assignment: Part 1: multiple quadratics
+Purpose: After user inputs the value for the coefficients a,b,c, the program otputs the real solutions for the quadratic equation ax^2+bx+c=0. The porgram continuies until the user enters 0 for the value of a.
+
+Explaining solution:
+I used the formula for the discriminant to find the solutions (D = b^2-4ac).
+When discriminant is above 0, there are 2 real solutions. x1=(-b+sqrt(D))/(2a),x2=(-b-sqrt(D))/(2a)
+When discriminant is equal to 0, there are 2 equivalent real solutions. x=(-b)/(2a)
+When discriminant is less than 0, there are no real solutions.
+
+Program's structure:
+This program was different beause I have created a seprate function that finds a discriminant based on a,b,c coefficients entered.
+The continuous prompting for the user's input is achieved using a while loop and a boolean flag exitProgram. When the user inputs 0 in a, this boolean flag becomes true and it allows the program to exit the while loop.
+
+Test cases (how the program was evaluted for correctness):
+
+a = 1
+b = 2
+c = 1
+Result:
+x: -1.000000. (correct)
+
+a = -1321
+b = 2321
+c = 5324
+Result:
+x1: -1.312856, x2: 3.069858. (correct)
+
+a = 21
+b = 21
+c = 2000
+Result:
+No solutions. (correct)
+When I enter 0 for a, the program stops. (correct)
+
+
+Assignment: Part 2 quadrants and polar coordinates
+Purpose: This program takes the cartersian coordinates as an input and prints which quadrant belong to, and its radius and angle in polar coordinates. 
+
+Strucutre:
+The program has 4 functions that increase the readibility of the program:
+-  int get_quadrant(double, double);
+-  double get_radius(double, double);
+-  double get_angle(double, double);
+-  void show_info(int, double, double);
+
+These functions are called in the int main() function.
+In the begining of the int main function, the user is prompted to enter the values of x and y in the cartesian coordinate system, and then, as the input is utilized as arguments for the functions described above, Then quadrant and radius and angle in degress is prited for the given point in cartersian coordinate system.
+
+Evaluation:
+
+Input 1: (testing integers)
+3 4
+Output 1:
+The point is in 1 quadrant.
+In polar coordinates, it has angle 53.13 degrees and radius 5.00. (correct)
+
+Input 2: (testing decimal numbers)
+-2.4 2.2
+Output 2:
+The point is in 2 quadrant.
+In polar coordinates, it has angle 137.49 degrees and radius 3.26.
+
+Input 3: (testing edge cases)
+0 5
+Output:
+The point does not belong to any quadrant.
+In polar coordinates, it has angle 90.00 degrees and radius 5.00. (correct)
+
+Assignment: Part 3 text menu calculator
+Purpose: This program acts as a  text menu-driven basic calculator for the four simple arithmetic operations:
+add, subtract, multiply, divide.
+
+Strucutre:
+User perspective:
+
+When the user starts the program, the program prints the menu options for the user to choose from.
+The user must enter an integrer that correspond to a menu option in order to use this option.
+Once the user has selected an option, then the program promts that user to enter two valid numbers (could be an integer or decimal).
+Once the user enter two numbers separated by a space sign or an enter sign, the program displas the result of the user selected operation performed on the user entered numbers.
+If the user wants to exit the program, he or she should select the menu option "5".
+
+Developer perspective:
+The program has separate functions for each of the operations (multiply, divide, subtract, add)
+In the main funciton, the program has a while loop that itereates until the flag variable finishProgram becomes true. The while loop contains a conditional statement that check if user entered "5" for the command. If so, then the flag variable becomes false. Otherwise, the program proceeds with the switch selection statement.
+The while loop contains a switch selection statement to match the integer number with the user selected operation.
+If invalid input is entered istead of the command, the program displays an error by using the switch selection statement's default part.
+
+Evaluation:
+The porgram perfectly replicates the input and output options from the example given in the lab description. I have also tested on the edge cases realted to wrong command input and division by zero, and the program displayed the appropriate errors.
+Example output: https://prnt.sc/86sUZUYZeTrL 
+My output: https://prnt.sc/7XeME68TzoS3 
+
+Since it wasn't explicety described in description and I feel that it could be useful to have consistent output, I've made a decision to consistently display 2 decimal places when printing a result.
+
+
