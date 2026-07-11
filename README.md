@@ -17,3 +17,55 @@ Lab projects from my first-semester C course. Everything here is my own code, pu
 The crossword generator from lab8 lives in its own repo: [crossword-generator](https://github.com/sviatil0/crossword-generator).
 
 Build any gfx lab with its `Makefile` (requires X11).
+
+## Demos
+
+### Conway's Game of Life (lab7)
+
+`./playlife myscene.txt` steps a 40x40 board; a mid-simulation generation:
+
+```
+┌----------------------------------------┐
+|                                        |
+|  XX                                    |
+|  XX                                    |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|           X                            |
+|           X                            |
+|           X                            |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|                                        |
+|       XXX X                            |
+|       XXXXX                            |
+|      XXX  X                            |
+|         XX   X        X X              |
+|         XX   X         XX              |
+|      XXXXX   X         X               |
+|       X                      XXX       |
+|       X  XXX                           |
+|                            X     X     |
+|                            X     X     |
+|                            X     X     |
+|                                        |
+|                              XXX       |
+|                                        |
+└----------------------------------------┘
+```
+
+Blocks are still lifes, the vertical bar is a blinker mid-cycle; scenes load from text files (`glider.txt`, `myscene.txt`) or interactive cell entry.
+
+### Snake (lab11 final project)
+
+X11 arcade game on the course gfx library: arrow keys steer, the snake grows on every apple, and the game speeds up as your score climbs. Build with `make` inside `lab11/` (requires X11) and run `./project`.
